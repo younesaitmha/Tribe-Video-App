@@ -1,10 +1,10 @@
 .container {
-  padding: 0 2rem;
+  padding: 2rem 0 0rem 0;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /*padding: 4rem 0;*/
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,8 @@
 .description {
   margin: 4rem 0;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  width: 35%;
 }
 
 .code {
@@ -113,4 +114,24 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.containerLandingImg {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: flex;
+}
+
+.landingImage {
+  width: auto;
+  height: auto;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: #0070f3;
+  z-index: 1;
+}
+
+.landingImageTitle {
+  z-index: 3;
 }
