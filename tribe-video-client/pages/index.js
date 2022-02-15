@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import ButtonTribe from '../components/Button';
+import Input from '../components/Input';
 
 export default function Home() {
   return (
@@ -21,7 +23,7 @@ export default function Home() {
         </p>
 
         <div className={styles.containerLandingImg}>
-          <Image className={styles.landingImage} src="/background.jpg" width={1800} height={1000} alt="background picture" />
+          <Image className={styles.landingImage} src="/background.webp" width={1800} height={1000} alt="background picture" />
           <h3 className={styles.landingImageTitle}>Stay Posted!</h3>
         </div>
 
@@ -59,6 +61,9 @@ export default function Home() {
           </span>
         </a>
       </footer>
+      <ButtonTribe text={'hello'} type={'btn'} />
+      <br />
+      <Input id={'id'} type={'type'} name={'name'} placeholder={'placeholder'} label={'label'} />
     </div>
   )
 }
