@@ -11,28 +11,25 @@ const style = {
     label: {
         paddingBottom: '8px',
         fontFamily: 'Inter',
-        fontSize: '1.3em',
         fontWeight: 'normal',
         color: '#666666',
         lineHeight: '16px',
     },
     input: {
         paddingLeft: '12px',
-        height: '48px',
         height: '44px',
-        width: '80%',
+        width: '90%',
         border: '1px solid #DBDBDB',
         boxSizing: 'border-box',
         borderRadius: '6px',
-
     }
 }
 
 
-function Input({ id, name, type, placeholder, label }) {
+function Input({ id, name, type, placeholder, label, fontSize }) {
     return (
         <div style={style.container}>
-            <label style={style.label}>{label}</label>
+            <label style={{...style.label, fontSize: {fontSize}}}>{label}</label>
             <input style={style.input} id={id} type={type} name={name} placeholder={placeholder}/>
         </div>
     );
@@ -43,7 +40,12 @@ Input.propTypes = {
     name: PropTypes.name,
     type: PropTypes.string,
     id: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
+    fontSize: PropTypes.string
 };
+
+Input.defaultProps = {
+    fontSize: '1.3em'
+}
 
 export default Input;

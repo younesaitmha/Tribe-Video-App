@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import animations from './../styles/animations.module.css'
 
 const buttonStyle = {
-    width: '398px',
+    width: '75%',
     height: '48px',
     background: '#005FFC',
     border: 'none',
@@ -12,14 +13,18 @@ const buttonStyle = {
     fontSize: '1.3em',
     fontWeight: 'normal',
     color: 'white',
-    letterSpacing: '1.1px',
+    letterSpacing: '1px',
+    marginLeft: '12%',
+    marginRight: '13%',
+    marginTop: '5%',
+    cursor: 'pointer'
 }
 
 function ButtonTribe({type, text} ) {
     return (
         <>
         {type === 'btn' ? (
-            <button style={buttonStyle}>{text}</button>
+            <button style={buttonStyle} className={animations.grow}>{text}</button>
         ) : (<Link>{text}</Link>)}
         </>
     );
