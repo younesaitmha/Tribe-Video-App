@@ -109,6 +109,7 @@ const Signin = () => {
           </div>
 
           <Button type={'btn'} text={'Log in'} />
+
           <p className='p-account'>Don't have account? <a href='/' className={styles.link} >Sign up</a></p>
         </div>
       </div>

@@ -1,10 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import ButtonTribe from '../components/Button';
-import Input from '../components/Input';
+import LoadingScreen from '../components/LoadingScreen';
+import React from 'react';
 
 export default function Home() {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => setLoading(false), 6000);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +18,8 @@ export default function Home() {
         <meta name="description" content="Tribe video app for uploading watching videos" />
         <link rel="icon" href="/profile.png" />
       </Head>
+
+      {loading ? <LoadingScreen /> : <></>}
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -23,27 +31,19 @@ export default function Home() {
         </p>
 
         <div className={styles.containerLandingImg}>
+          <div className={styles.landingImageTitle}>
+            <h3> STAY POSTED! </h3>
+          </div>
           <Image className={styles.landingImage} src="/background.webp" width={1800} height={1000} alt="background picture" />
-          <h3 className={styles.landingImageTitle}>Stay Posted!</h3>
         </div>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/auth/signup" className={styles.sign}>
+            <h2>Sign Up &rarr;</h2>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/auth/signin" className={styles.sign}>
+            <h2>Sign In &rarr;</h2>
           </a>
 
         </div>
@@ -60,10 +60,17 @@ export default function Home() {
             <Image src="/default-monochrome.svg" alt="tribe video logo" width={72} height={16} />
           </span>
         </a>
+        <a
+          href="https://twitter.com/FarfaouaMed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Made with ❤️ by&nbsp;
+          <span style={{ color: "#19ceda" }}>
+           Farfaoua
+          </span>
+        </a>
       </footer>
-      <ButtonTribe text={'hello'} type={'btn'} />
-      <br />
-      <Input id={'id'} type={'type'} name={'name'} placeholder={'placeholder'} label={'label'} />
-    </div>
-  )
+
+    </div>)
 }
