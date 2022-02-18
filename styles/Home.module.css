@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
 .container {
   padding: 2rem 0 0rem 0;
 }
@@ -19,6 +21,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color: #0070f3;
 }
 
 .footer a {
@@ -72,6 +75,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  height: 16rem;
 }
 
 .card {
@@ -104,6 +108,24 @@
   line-height: 1.5;
 }
 
+.sign {
+  margin: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+  color: #0070f3;
+  border: 1px solid#0070f3;
+  border-radius: 10px;
+  transition: color 0.15s ease, #eaeaea 0.15s ease;
+}
+
+.sign:hover,
+.sign:focus,
+.sign:active {
+  color: #292b2e;
+  border-color: #eaeaea;
+}
+
 .logo {
   height: 1em;
   margin-left: 0.5rem;
@@ -117,21 +139,47 @@
 }
 
 .containerLandingImg {
+  width: auto;
+  height: auto;
   margin: 0;
   border: 0;
   padding: 0;
-  display: flex;
+  position: relative;
+  text-align: center;
 }
 
 .landingImage {
-  width: auto;
-  height: auto;
+  position: relative;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   box-shadow: #0070f3;
-  z-index: 1;
+  z-index: -1;
 }
 
 .landingImageTitle {
+  position: absolute;
+  left: 38%;
+  bottom: 20%;
   z-index: 3;
+  border: 3px solid#0070f3;
+  border-radius: 20%;
+}
+
+.landingImageTitle h3 {
+  line-height: 1.11;
+  font-size: 3rem;
+  background-color: #0070f3;
+  padding: 1rem;
+  border: 2px solid#0070f3;
+  border-radius: 20%;
+}
+
+.landingImageTitle:focus,
+.landingImageTitle:hover {
+  border-color: black;
+}
+
+.landingImageTitle h3:focus,
+.landingImageTitle h3:hover {
+  border-color: black;
 }

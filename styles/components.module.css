@@ -1,0 +1,53 @@
+/* loader style */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.container::before {
+    background: var(--background-main-color);
+    opacity: 0.6;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.spinner {
+    color: var(--text-primary-color);
+    border-radius: 12px;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    display: inline;
+    color: #0070f3;
+}
+
+.spinner svg {
+  animation: spinning 1.4s infinite ease-in-out both;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  display: inline;
+}
+
+/* end loader style */
