@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import { setAuthToken } from './../../lib/ApolloClient.js'
@@ -86,14 +86,13 @@ const Signin = () => {
 
     return (
       <div className={styles.container}>
-        { !loading ? <LoadingScreen /> : <></>}
         <Head>
           <title>Tribe Video App</title>
           <meta name="description" content="Tribe video app for uploading watching videos" />
           <link rel="icon" href="/profile.png" />
         </Head>
-
-        <div className={styles.form}>
+        { !loading ? (<LoadingScreen />) :
+        (<div className={styles.form}>
           <h3 className={styles.welcome}> Welcome to TribeVideo</h3>
 
           <div className={styles.wrapper}>
@@ -111,7 +110,7 @@ const Signin = () => {
           <Button type={'btn'} text={'Log in'} />
 
           <p className='p-account'>Don't have account? <a href='/' className={styles.link} >Sign up</a></p>
-        </div>
+        </div>)}
       </div>
     )
 }
