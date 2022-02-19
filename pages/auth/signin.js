@@ -86,12 +86,9 @@ const Signin = () => {
 
     return (
       <div className={styles.container}>
-        <Head>
-          <title>Tribe Video App</title>
-          <meta name="description" content="Tribe video app for uploading watching videos" />
-          <link rel="icon" href="/profile.png" />
-        </Head>
-        { !loading ? (<LoadingScreen />) :
+        <title>Tribe Video App</title>
+
+        { loading ? (<LoadingScreen />) :
         (<div className={styles.form}>
           <h3 className={styles.welcome}> Welcome to TribeVideo</h3>
 
@@ -100,7 +97,7 @@ const Signin = () => {
           </div>
 
           <div className={styles.wrapper}>
-            <Input label={'Password'} id={'password'} type={'password'} name={'name'} placeholder={'placeholder'} />
+            <Input label={'Password'} id={'password'} type={'password'} name={'name'} placeholder={'********'} />
           </div>
 
           <div style={{width: '90%', paddingLeft: '7%', paddingTop: '4%', paddingBottom: '0'}}>

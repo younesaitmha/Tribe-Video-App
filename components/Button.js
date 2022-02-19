@@ -20,11 +20,11 @@ const buttonStyle = {
     cursor: 'pointer'
 }
 
-function ButtonTribe({type, text} ) {
+function ButtonTribe({type, text, click} ) {
     return (
         <>
         {type === 'btn' ? (
-            <button style={buttonStyle} className={animations.grow}>{text}</button>
+            <button onClick={() => click(true)} style={buttonStyle} className={animations.grow}>{text}</button>
         ) : (<Link>{text}</Link>)}
         </>
     );

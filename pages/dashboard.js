@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
@@ -8,30 +8,23 @@ import { validate } from 'email-validator'
 
 
 import LoadingScreen from './../components/LoadingScreen'
-import Input from './../components/Input'
-import Button from './../components/Button'
 import AsideBar from './../components/AsideBar'
 import VideoSection from './../components/dashboard/VideoSection'
+
 
 const Dashboard = () => {
     const [loading, setLoading] = useState(true)
 
-
     return (
         <div className='container-dash'>
-        { !loading ? <LoadingScreen /> : <></>}
-        <Head>
-          <title>Tribe Video App</title>
-          <meta name="description" content="Tribe video app for uploading watching videos" />
-          <link rel="icon" href="/profile.png" />
-        </Head>
+            <title>Tribe Video Dashboard</title>
+            { !loading ? <LoadingScreen /> : <></>}
 
-        <AsideBar />
+            <AsideBar />
 
-        <VideoSection />
+            <VideoSection />
 
-
-      </div>
+        </div>
     )
 }
 

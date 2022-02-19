@@ -13,15 +13,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Tribe Video App</title>
-        <meta name="description" content="Tribe video app for uploading watching videos" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#eaeaea" />
-      </Head>
+      <title>Tribe Video App</title>
 
       {loading ? (<LoadingScreen />) : (
       <React.Fragment>
@@ -35,10 +27,10 @@ export default function Home() {
           </p>
 
           <div className={styles.containerLandingImg}>
+            <Image className={styles.landingImage} src="/background.svg" width={1800} height={1000} alt="background picture" />
             <div className={styles.landingImageTitle}>
               <h3> STAY POSTED! </h3>
             </div>
-            <Image className={styles.landingImage} src="/background.webp" width={1800} height={1000} alt="background picture" />
           </div>
 
           <div className={styles.grid}>
