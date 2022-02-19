@@ -149,18 +149,14 @@
 }
 
 .landingImage {
-  position: relative;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   box-shadow: #0070f3;
-  z-index: -1;
 }
 
 .landingImageTitle {
-  position: absolute;
-  left: 38%;
-  bottom: 20%;
-  z-index: 3;
+  margin-top: 10%;
+  margin-bottom: 8%;
   border: 3px solid#0070f3;
   border-radius: 20%;
 }
@@ -176,10 +172,10 @@
 
 .landingImageTitle:focus,
 .landingImageTitle:hover {
-  border-color: black;
+  border-color: #3F3D56;
 }
 
 .landingImageTitle h3:focus,
 .landingImageTitle h3:hover {
-  border-color: black;
+  border-color: #3F3D56;
 }
