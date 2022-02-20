@@ -10,6 +10,7 @@ import styles from './../../styles/login.module.css'
 import LoadingScreen from './../../components/LoadingScreen'
 import Input from './../../components/Input'
 import Button from './../../components/Button'
+import Link from 'next/link';
 
 export const LOGIN_MUTATION = gql`
   mutation login($input: LoginInput!) {
@@ -93,7 +94,7 @@ const Signin = () => {
           <h3 className={styles.welcome}> Welcome to TribeVideo</h3>
 
           <div className={styles.wrapper}>
-            <Input label={'Email'} id={'email'} type={'e-mail'} name={'email'} placeholder={'placeholder'} style={{width:'100%'}} />
+            <Input label={'Email'} id={'email'} type={'e-mail'} name={'email'} placeholder={'example@email.com'} style={{width:'100%'}} />
           </div>
 
           <div className={styles.wrapper}>
@@ -101,12 +102,12 @@ const Signin = () => {
           </div>
 
           <div style={{width: '90%', paddingLeft: '7%', paddingTop: '4%', paddingBottom: '0'}}>
-            <a className={styles.link} href='/'>Forgot your password?</a>
+            <Link className={styles.link} href='/auth/resetPassword'>Forgot your password?</Link>
           </div>
 
           <Button type={'btn'} text={'Log in'} />
 
-          <p className='p-account'>Don't have account? <a href='/' className={styles.link} >Sign up</a></p>
+          <p className='p-account'>Don't have account? <Link href='/auth/signup' className={styles.link} >Sign up</Link></p>
         </div>)}
       </div>
     )

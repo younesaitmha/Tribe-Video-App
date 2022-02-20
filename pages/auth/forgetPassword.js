@@ -6,6 +6,7 @@ import LoadingScreen from '../../components/LoadingScreen'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import animations from './../../styles/animations.module.css'
+import Link from 'next/link';
 
 
 const ForgetPassword = () => {
@@ -25,12 +26,12 @@ const ForgetPassword = () => {
                 <p className={styles.resetPasswordText} >It’s okay, we got you! What’s your email address?</p>
 
                 <div className={styles.wrapper}>
-                    <Input label={'Email'} id={'email'} type={'password'} name={'email'} placeholder={'placeholder'} style={{width:'100%'}} />
+                    <Input label={'Email'} id={'password'} type={'password'} name={'email'} placeholder={'example@mail.com'} style={{width:'100%'}} />
                 </div>
 
                 <Button type={'btn'} text={'Reset Password'} />
 
-                <p className={styles.resetPasswordText} >Oh wait! I remembered!<br />Back to <a style={{color: '#0070f3'}}>Sign in</a></p>
+                <p className={styles.resetPasswordText} >Oh wait! I remembered!<br />Back to <Link href='/auth/signin' style={{color: '#0070f3'}}>Sign in</Link></p>
 
             </div>
         </div>

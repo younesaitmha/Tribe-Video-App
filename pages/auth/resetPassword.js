@@ -22,11 +22,11 @@ const ResetPassword = () => {
                 <h3 className={styles.welcome} style={{marginTop: '14%'}}> Reset your password</h3>
 
                 <div className={styles.wrapper}>
-                    <Input label={'New password'} id={'email'} type={'password'} name={'email'} placeholder={'placeholder'} style={{width:'100%'}} />
+                    <Input label={'New password'} id={'email'} type={'password'} name={'password1'} placeholder={'********'} style={{width:'100%'}} />
                 </div>
 
                 <div className={styles.wrapper}>
-                    <Input label={'Confirm password'} id={'password'} type={'password'} name={'name'} placeholder={'placeholder'} />
+                    <Input label={'Confirm password'} id={'password'} type={'password'} name={'password2'} placeholder={'********'} />
                 </div>
 
                 <Button type={'btn'} text={'Submit'} />

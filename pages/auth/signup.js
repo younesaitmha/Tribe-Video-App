@@ -4,6 +4,7 @@ import styles from './../../styles/login.module.css'
 import LoadingScreen from './../../components/LoadingScreen'
 import Input from './../../components/Input'
 import Button from './../../components/Button'
+import Link from 'next/link';
 
 
 const Signup = () => {
@@ -22,19 +23,19 @@ const Signup = () => {
                 <h3 className={styles.welcome} style={{marginTop: '10%'}}> Sign up to start uploading</h3>
 
                 <div className={styles.wrapper}>
-                    <Input fontSize={'0.8em'} label={'Name'} id={'email'} type={'e-mail'} name={'email'} placeholder={'placeholder'} style={{width:'100%'}} />
+                    <Input fontSize={'0.8em'} label={'Name'} id={'name'} type={'e-mail'} name={'name'} placeholder={'name'} style={{width:'100%'}} />
                 </div>
 
                 <div className={styles.wrapper}>
-                    <Input fontSize={'0.8em'} label={'Email'} id={'email'} type={'e-mail'} name={'email'} placeholder={'placeholder'} style={{width:'100%'}} />
+                    <Input fontSize={'0.8em'} label={'Email'} id={'email'} type={'e-mail'} name={'email'} placeholder={'example@mail.com'} style={{width:'100%'}} />
                 </div>
 
                 <div className={styles.wrapper}>
-                    <Input fontSize={'0.8em'} label={'Password'} id={'password'} type={'password'} name={'name'} placeholder={'placeholder'} />
+                    <Input fontSize={'0.8em'} label={'Password'} id={'password'} type={'password'} name={'name'} placeholder={'********'} />
                 </div>
 
                 <div style={{width: '90%', paddingLeft: '7%', paddingTop: '4%', paddingBottom: '0'}}>
-                    <a className={styles.link} href='/'>Forgot your password?</a>
+                    <Link className={styles.link} href='/auth/forgetPassword'> Forgot your password? </Link>
                 </div>
 
                 <Button type={'btn'} text={'Log in'} />
