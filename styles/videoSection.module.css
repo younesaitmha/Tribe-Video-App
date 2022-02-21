@@ -1,0 +1,12 @@
+.videoIcon {
+    aspect-ratio: 1/1;
+}
+
+.section-video {
+    width: 728px;
+    height: 340px;
+    background-color: #F8F9FB;
+    border: 1px dashed #B6BDCB;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
