@@ -7,7 +7,6 @@ const Modal = ({ show, onClose, children, title }) => {
 
     useEffect(() => {
       setIsBrowser(true);
-      console.log(children)
     }, []);
 
     const handleCloseClick = (e) => {
