@@ -26,18 +26,31 @@ const style = {
 }
 
 
-function Input({ id, name, type, placeholder, label, fontSize }) {
+function Input({ id, name, type, placeholder, label, fontSize, onChange }) {
+    const handleOnChange = (e) => {
+        if (onChange) {
+          onChange(e.target.value)
+        }
+        return null
+    }
     return (
         <div style={style.container}>
             <label style={{...style.label, fontSize: {fontSize}}}>{label}</label>
-            <input style={style.input} id={id} type={type} name={name} placeholder={placeholder}/>
+            <input
+                style={style.input}
+                id={id}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                onChange={handleOnChange}
+            />
         </div>
     );
 }
 
 Input.propTypes = {
     placeholder: PropTypes.string,
-    name: PropTypes.name,
+    name: PropTypes.string,
     type: PropTypes.string,
     id: PropTypes.string,
     label: PropTypes.string,
