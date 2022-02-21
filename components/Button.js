@@ -20,11 +20,23 @@ const buttonStyle = {
     cursor: 'pointer'
 }
 
-function ButtonTribe({type, text, click} ) {
+function ButtonTribe({type, text, click, disabled, htmlType} ) {
+
+    const handleClick = (click) => {
+        return click()
+    }
+
     return (
         <>
         {type === 'btn' ? (
-            <button onClick={() => click(true)} style={buttonStyle} className={animations.grow}>{text}</button>
+            <button
+                disabled={disabled}
+                type={htmlType}
+                onClick={() => handleClick}
+                style={buttonStyle}
+                className={animations.grow}>{text}
+                {disabled}
+            </button>
         ) : (<Link>{text}</Link>)}
         </>
     );

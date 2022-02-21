@@ -122,8 +122,8 @@ export default function Home() {
           >
             <span className={styles.footerTitle}>
               Last class "Project" ❤️ 2022 INSEA.<br />
-              Thanks a lot to the senior software engineer Mouad Belbah for his<br />
-              efforts teaching us MERN Stack and also for this insightful project.
+              <span className={styles.cadre}>Thanks a lot to the senior software engineer Mouad Belbah for his<br />
+              efforts teaching us MERN Stack and also for this insightful project.</span>
             </span>
           </a>
         </footer>
