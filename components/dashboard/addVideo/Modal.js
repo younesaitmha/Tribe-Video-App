@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
+import Link from 'next/link'
 
 
 const Modal = ({ show, onClose, children, title }) => {
@@ -18,8 +19,8 @@ const Modal = ({ show, onClose, children, title }) => {
       <div className="modal">
         <div className="container-modal">
           <div className="header-modal">
-            <h3>{title}</h3>
-            <a href="/" onClick={handleCloseClick}><i class="bi bi-x"></i></a>
+            <h3 className="h1">{title}</h3>
+            <Link href="/" onClick={handleCloseClick}><i className="bi bi-x"></i></Link>
           </div>
           <div className="body-modal">{children}</div>
         </div>

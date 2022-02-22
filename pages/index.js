@@ -37,7 +37,7 @@ export default function Home() {
               <p className={styles.description}>
                 Application that allows us to upload, list our videos and watch others videos.
               </p>
-              <Link href='/auth/signup'><div className={styles.btnStart}><i class="bi bi-steam"></i><span>Start Now</span></div></Link>
+              <Link href='/auth/signup'><div className={styles.btnStart}><i className="bi bi-steam"></i><span>Start Now</span></div></Link>
             </div>
             <Image src='/video_files.png' width={640} height={383} styles={{flexBasis: '60%'}} alt="img style" />
           </div>
@@ -66,12 +66,12 @@ export default function Home() {
 
               <div className={styles.card}>
                 <Image src="/aitmha.svg" width={200} height={200} />
-                <h2>Younes Ait M'ha</h2>
+                <h2>Younes Ait M&apos;ha</h2>
                 <p>Software Engineering Student at INSEA</p>
                 <div className={styles.socialMedia}>
-                  <i class="bi bi-twitter"></i>
-                  <i class="bi bi-github"></i>
-                  <i class="bi bi-linkedin"></i>
+                  <i className="bi bi-twitter"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-linkedin"></i>
                 </div>
               </div>
 
@@ -80,9 +80,9 @@ export default function Home() {
                 <h2>Farfaoua Amine</h2>
                 <p>Software Engineering Student at INSEA</p>
                 <div className={styles.socialMedia}>
-                  <i class="bi bi-twitter"></i>
-                  <i class="bi bi-github"></i>
-                  <i class="bi bi-linkedin"></i>
+                  <i className="bi bi-twitter"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-linkedin"></i>
                 </div>
               </div>
 
@@ -91,9 +91,9 @@ export default function Home() {
                 <h2>Younes Mouzaki</h2>
                 <p>Software Engineering Student at INSEA</p>
                 <div className={styles.socialMedia}>
-                  <i class="bi bi-twitter"></i>
-                  <i class="bi bi-github"></i>
-                  <i class="bi bi-linkedin"></i>
+                  <i className="bi bi-twitter"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-linkedin"></i>
                 </div>
               </div>
 
@@ -102,9 +102,9 @@ export default function Home() {
                 <h2>Maatouf Saad</h2>
                 <p>Software Engineering Student at INSEA</p>
                 <div className={styles.socialMedia}>
-                  <i class="bi bi-twitter"></i>
-                  <i class="bi bi-github"></i>
-                  <i class="bi bi-linkedin"></i>
+                  <i className="bi bi-twitter"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-linkedin"></i>
                 </div>
               </div>
 
@@ -121,7 +121,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <span className={styles.footerTitle}>
-              Last class "Project" ❤️ 2022 INSEA.<br />
+              Last class &quot;Project&quot; ❤️ 2022 INSEA.<br />
               <span className={styles.cadre}>Thanks a lot to the senior software engineer Mouad Belbah for his<br />
               efforts teaching us MERN Stack and also for this insightful project.</span>
             </span>

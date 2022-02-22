@@ -102,7 +102,6 @@ const VideoSection = () => {
                 onClose={() => setShowModal(false)}
                 show={showModal}
                 title={'Upload new video'}
-                children={<></>}
                 >
                     <MyDropzone />
                 </Modal>

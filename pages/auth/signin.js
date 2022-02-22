@@ -123,7 +123,7 @@ const Signin = () => {
 
           <Button type={'btn'} text={'Log in'} htmlType="submit" disabled={disabled} />
 
-          <p className='p-account'>Don't have account? <Link href='/auth/signup' className={styles.link} >Sign up</Link></p>
+          <p className="p-account">Don&apos;t have account? <Link href='/auth/signup' className={styles.link} >Sign up</Link></p>
         </form>)}
       </div>
     )
