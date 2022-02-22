@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { setAuthToken } from './../lib/ApolloClient.js'
+import { setAuthToken } from './../lib/ApolloClientt'
 import { gql, useMutation } from '@apollo/client'
 import { validate } from 'email-validator'
 
