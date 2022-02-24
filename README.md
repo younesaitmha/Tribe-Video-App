@@ -9,6 +9,10 @@ this frontend has a backend [Tribe Video Api](https://github.com/younesaitmha/tr
 - mouzaki younes
 - saad maatouf
 
+## Report of our project
+
+Here you can find a report of our project : https://docs.google.com/document/d/1KqXFIeqFMyM63Lt-JmMOd2gxVm-gXgvc4etfZ4mbWaE/edit?usp=sharing
+
 
 ## This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 
