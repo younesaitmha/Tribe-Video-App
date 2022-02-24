@@ -1,6 +1,14 @@
 # Tribe-Video-App
 
-this frontend has a backend [https://github.com/younesaitmha/tribe-video-api](Tribe Video Api)
+this frontend has a backend [Tribe Video Api](https://github.com/younesaitmha/tribe-video-api)
+
+## team
+
+- younes ait m'ha
+- mohamed amine farfaoua 
+- mouzaki younes
+- saad maatouf
+
 
 ## This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 
