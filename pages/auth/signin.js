@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 
 import { setAuthToken } from '../../lib/ApolloClientt.js'
@@ -12,7 +12,7 @@ import Button from './../../components/Button'
 import Link from 'next/link';
 
 
-export const LOGIN_MUTATION = gql`
+const LOGIN_MUTATION = gql`
   mutation login($input: LoginInput!) {
     login(input: $input) {
       success
@@ -58,14 +58,13 @@ const Signin = () => {
       })
       if (result.success) {
         setAuthToken(result.token)
-
         router.replace('/dashboard')
       }
       setLoading(false)
       throw result
     } catch (e) {
       console.log(e);
-      //setMessage(JSON.stringify(e.message));
+      setMessage(JSON.stringify(e.message));
       setLoading(false);
       setDisabled(false);
     }
@@ -94,7 +93,7 @@ const Signin = () => {
           <h3 className={styles.welcome}> Welcome to TribeVideo</h3>
 
           <div className={styles.wrapper}>
-          {message && <styles.ErrorMessage>{message}</styles.ErrorMessage>}
+          {message && <div className={styles.errorMessage}>{message}</div>}
             <Input
               label={'Email'}
               id={'email'}
